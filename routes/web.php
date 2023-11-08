@@ -37,8 +37,10 @@ Route::middleware('auth')->group(
         Route::get('/customer', [InvoiceController::class, 'add'])->name('customer.add');
         Route::post('/customer', [InvoiceController::class, 'store'])->name('customer.store');
 
-        // data . edit
-
+        //edit
+        Route::get('/customer/edit/{id}', [InvoiceController::class, 'edit'])->name('customer.edit');
+        Route::post('/customer/update', [InvoiceController::class, 'customer_update'])->name('customer.update');
+        Route::get('/customer/delete/{id}', [InvoiceController::class, 'customer_delete'])->name('customer.delete');
     }
 );
 
