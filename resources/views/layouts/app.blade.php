@@ -8,7 +8,7 @@
 
 
     {{-- bootstrap5 --}}
-   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
 
     {{-- <title>{{ config('app.name', 'Laravel') }} {{!empty($header_title) ? $header_title : ''}} - School</title> --}}
     <title> Project | {{!empty($header_title) ? $header_title : ''}}</title>
@@ -35,7 +35,7 @@
         <!-- Page Heading -->
         @if (isset($header))
         <header class="bg-white dark:bg-gray-800 shadow">
-            <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+            <div class="">
                 {{ $header }}
             </div>
         </header>
