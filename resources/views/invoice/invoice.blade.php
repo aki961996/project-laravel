@@ -57,9 +57,10 @@
                                             <tbody class="bg-white divide-y divide-gray-200">
                                                 @foreach ($data as $task)
                                                 <tr>
-                                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-black-500">
+                                                    <th scope="row">{{$data->firstItem() + $loop->index}}</th>
+                                                    {{-- <td class="px-6 py-4 whitespace-nowrap text-sm text-black-500">
                                                         {{ $task->id }}
-                                                    </td>
+                                                    </td> --}}
                                                     <td class="px-6 py-4 whitespace-nowrap text-sm text-black-500">
                                                         {{ $task->customer_name }}
                                                     </td>
@@ -120,10 +121,19 @@
 
                                     </div>
 
+                                    {{-- <div style="padding: 10px; float:right;">
+                                        {!!
+                                        $data->appends(\Illuminate\Support\Facades\Request::except('page'))->links()
+                                        !!}
+                                    </div> --}}
+                                    {{ $data->links() }}
+
+
                                 </div>
                                 <div class="mt-4">
-                                    {{-- {{ $data->links() }} --}}
+
                                 </div>
+
                             </div>
                         </div>
                     </div>

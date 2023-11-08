@@ -14,7 +14,7 @@ class InvoiceController extends Controller
 {
     public function list()
     {
-        $data = Invoice::all();
+        $data = Invoice::latest()->paginate(3);
 
 
         return view('invoice.invoice', ['data' => $data]);
