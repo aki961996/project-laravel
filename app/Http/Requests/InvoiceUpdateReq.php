@@ -22,7 +22,7 @@ class InvoiceUpdateReq extends FormRequest
     public function rules(): array
     {
         return [
-      
+            'customer_name' => ['nullable'],
             'customer_email' => ['nullable'],
             'qty' => ['nullable'],
             'amount' => ['nullable'],
@@ -32,7 +32,7 @@ class InvoiceUpdateReq extends FormRequest
             'net_amount' => ['nullable'],
             'invoice_date' => ['nullable'],
             'file_path' => 'required|file',
-         
+
 
 
         ];

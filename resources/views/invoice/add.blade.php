@@ -239,18 +239,18 @@
                 let qty = $('#qty').val();
                 let amount = $('#amount').val();
                 let totalAmount = qty * amount;
+                const taxPercentage = $('#tax_percentage').val();
+                const taxAmount = taxPercentage / 100 * totalAmount;
+                var netAmount=0;
+                
                 $('#total_amount').val(totalAmount);
 
                 // second
-                const taxPercentage = $('#tax_percentage').val();
                 console.log(taxPercentage, 'taxPercentage');
 
-                const taxAmount = taxPercentage / 100 * totalAmount;
                 $('#tax_amount').val(taxAmount);
 
                 // thirdd
-                var netAmount=0;
-                
                 netAmount = totalAmount + taxAmount;
                 console.log(netAmount, 'netAmount');
                 $('#net_amount').val(netAmount);
